@@ -8,6 +8,11 @@
     #8b5cf6
   );
 }
+
+.text-brand-gradient{
+  @apply bg-clip-text text-transparent bg-[linear-gradient(to_right,#f97316,#ec4899,#8b5cf6)];
+
+}
 .btnNav{
   @apply rounded-[25px] text-2xl p-[25px];
 }

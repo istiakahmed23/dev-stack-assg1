@@ -1,12 +1,13 @@
 import React from 'react';
 import banner from '../assets/banner-stack.png'
+import '../App.css';
 
 const Hero = () => {
     return (
         <>
-            <div className="container mx-auto flex items-center justify-between py-[130px] mb-7">
+            <div className="container mx-auto flex items-center justify-between py-[100px] mb-7">
                 <div className="">
-                    <h2 className="text-[60px] font-extrabold">Build Your Ideal <br /> <span className="bg-clip-text text-transparent bg-[linear-gradient(to_right,#f97316,#ec4899,#8b5cf6)]">Development Stack</span>
+                    <h2 className="text-[60px] font-extrabold">Build Your Ideal <br /> <span className="text-brand-gradient">Development Stack</span>
                     </h2>
                     <p className="text-[18px] font-normal text-[#475569] pt-[15px] pb-[35px]">Explore frontend, backend, database, and tooling options,
                         <br />compare them side by side, and put together the stack that fits your<br />

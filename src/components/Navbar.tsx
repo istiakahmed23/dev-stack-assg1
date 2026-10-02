@@ -5,7 +5,7 @@ import '../App.css';
 const Navbar = () => {
     return (
         <div>
-            <nav className="">
+            <nav className="fixed top-0 left-0 z-50 w-full bg-white shadow-md">
                 <div className="container mx-auto flex items-center justify-between py-6">
                     <img src={logo} alt="Logo" className="" />
                     <ul className="flex gap-5 items-center text-2xl text-[#475569]">
