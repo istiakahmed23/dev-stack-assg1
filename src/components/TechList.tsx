@@ -18,6 +18,7 @@ const TechList = ({ technologies, onAdd }: TechListProps) => {
                         key={tech.id}
                         tech={tech}
                         onAdd={onAdd}
+                        isAdded={false}
 
                     />
 
