@@ -4,9 +4,10 @@ import TechListCard from './TechListCard';
 
 interface TechListProps {
     technologies: Technology[];
+    onAdd: (tech: Technology) => void;
 }
 
-const TechList = ({ technologies }: TechListProps) => {
+const TechList = ({ technologies, onAdd }: TechListProps) => {
     
     return (
         <>
@@ -14,7 +15,8 @@ const TechList = ({ technologies }: TechListProps) => {
             {technologies.map((tech) => (
                 <TechListCard 
                 key={tech.id} 
-                tech={tech} />
+                tech={tech} 
+                onAdd={onAdd} />
                 
             ))}
 
