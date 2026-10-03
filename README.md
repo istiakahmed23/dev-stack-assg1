@@ -1,32 +1,13 @@
-# React + TypeScript + Vite
+Answers:
+1. JSX is a syntax that lets us write HTML-like code inside JavaScript/TypeScript. React uses JSX to describe what the UI should look like
+2. Props are data passed from a parent component to a child component. And, State is data that a component manages and can change over time.
+3. useState lets a React component store and update data. I used it in App.tsx to manage data, also used state for the loading and error status.
+4. useEffect is used for side effects such as fetching data. I used it in App.tsx to fetch the technology data from data.json when the application loads.
+5. A unique key helps React identify each item in a list and understand which items were added, removed, or changed.
+6. Conditional rendering means showing different UI depending on a condition. For example in the sidebar, I show an empty message when no technology has been selected.
+ {stack.length === 0 ? (
+  <p>No technology selected</p>
+) : (
+  // selected technologies
+)}
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.

@@ -10,7 +10,7 @@ const Footer = () => {
                 <div className="container  mx-auto w-full py-12">
                     <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5">
 
-                        {/* Brand section */}
+                        
                         <div className="lg:col-span-2">
                             <img
                                 src={logo}
@@ -23,7 +23,7 @@ const Footer = () => {
                                 building modern software.
                             </p>
 
-                            {/* Social icons */}
+                            
                             <div className="mt-4 flex items-center gap-4 text-slate-600">
                                 <a
                                     href="https://github.com"
@@ -51,7 +51,7 @@ const Footer = () => {
                             </div>
                         </div>
 
-                        {/* Product */}
+                       
                         <div>
                             <h3 className="mb-3 text-[16px] font-bold uppercase">
                                 Product
