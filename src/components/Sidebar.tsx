@@ -24,7 +24,7 @@ const Sidebar = ({ stack, onRemove, onRemoveAll }: SidebarProps) => {
                 </div>
 
                 <div className="mt-3 space-y-2">
-                    {stack.length === 0 ? (<p className="rounded-md bg-slate-50 p-3 text-xs text-slate-500">
+                    {stack.length === 0 ? (<p className="rounded-md bg-slate-50 p-3 text-[14px] text-slate-500">
                         No technologies selected yet.
                     </p>) : (stack.map((tech) => (
                         <div key={tech.id}

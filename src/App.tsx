@@ -7,6 +7,7 @@ import Navbar from './components/Navbar'
 import type { Technology } from './types'
 import { toast, ToastContainer } from 'react-toastify'
 import "react-toastify/dist/ReactToastify.css";
+import Footer from './components/Footer'
 
 function App() {
 
@@ -95,6 +96,8 @@ function App() {
     onRemove={handleRemoveFromStack}
     onRemoveAll={handleRemoveAll}
     />
+
+    <Footer />
 
 
     {/* keeping Toast container inside App.tsx/main.tsx */}
