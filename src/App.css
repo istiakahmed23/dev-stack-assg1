@@ -14,5 +14,5 @@
 
 }
 .btnNav{
-  @apply rounded-[25px] text-2xl p-[25px];
+  @apply rounded-[25px] text-[16px] p-[15px] lg:text-2xl lg:p-[25px];
 }

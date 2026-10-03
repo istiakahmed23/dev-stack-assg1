@@ -8,6 +8,7 @@ import type { Technology } from './types'
 import { toast, ToastContainer } from 'react-toastify'
 import "react-toastify/dist/ReactToastify.css";
 import Footer from './components/Footer'
+import NavbarTwo from './components/NavbarTwo'
 
 function App() {
 
@@ -87,7 +88,7 @@ function App() {
 
   return (
     <>
-    <Navbar/>
+    <NavbarTwo />
     <Hero/>
     <MainLayout 
     technologies={technologies}
