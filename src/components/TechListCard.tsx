@@ -1,4 +1,4 @@
-import React from 'react';
+
 import type { Technology } from '../types';
 interface TechListCardProps {
     tech: Technology;
@@ -68,11 +68,16 @@ const TechListCard = ({ tech, onAdd, isAdded }: TechListCardProps) => {
                 <button
                     onClick={() => onAdd(tech)}
                     disabled={isAdded}
-                    className={`w-full rounded-lg bg-black py-2 text-[18px] font-semibold text-white hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-40
-                    ${isAdded ? "cursor-not-allowed bg-gray-400 opacity-50 blur-[1px]" : "bg-slate-950 hover:bg-slate-700"}`}
-                >
-                    {isAdded ? "Added to Stack" : "Add to Stack"}
+                    className={`w-full rounded-lg py-2 text-[18px] font-semibold text-white transition-colors
+                        ${
+                        isAdded
+                            ? "cursor-not-allowed bg-gray-400 opacity-70"
+                            : "bg-slate-950 hover:bg-slate-700"
+                        }`}
+                    >
+                    {isAdded ? "✓ Added to Stack" : "Add to Stack"}
                 </button>
+                
             </div>
 
 

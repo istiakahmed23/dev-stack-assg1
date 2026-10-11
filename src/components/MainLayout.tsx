@@ -1,4 +1,4 @@
-import React from 'react';
+
 import type { Technology } from '../types';
 import TechList from './TechList';
 import Sidebar from './Sidebar';
@@ -7,7 +7,7 @@ interface MainLayoutProps {
         technologies: Technology[];
         stack: Technology[];
         onAdd: (tech: Technology) => void;
-        onRemove: (id: number) => void;
+        onRemove: (id: string) => void;
         onRemoveAll: () => void;
 }
 
@@ -30,6 +30,7 @@ const MainLayout = ({ technologies, stack, onAdd, onRemove, onRemoveAll }: MainL
                     <section className="lg:col-span-3">
                         <TechList
                             technologies={technologies}
+                            stack={stack}  // pass the stack prop because TechList needs to know which technologies are already added to the stack, it helps to disable button
                             onAdd={onAdd}
                         />
 

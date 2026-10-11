@@ -1,11 +1,11 @@
-import React from 'react';
+
 import type { Technology } from '../types';
 import { ImCross } from "react-icons/im";
 
 
 interface SidebarProps {
     stack: Technology[];
-    onRemove: (id: number) => void;
+    onRemove: (id: string) => void;
     onRemoveAll: () => void;
 }
 

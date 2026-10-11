@@ -1,4 +1,4 @@
-import React from 'react';
+
 import logo from '../assets/logo-text.png';
 import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';

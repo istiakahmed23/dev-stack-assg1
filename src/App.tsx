@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import Hero from './components/Hero'
 import MainLayout from './components/MainLayout'
-import Navbar from './components/Navbar'
+
 import type { Technology } from './types'
 import { toast, ToastContainer } from 'react-toastify'
 import "react-toastify/dist/ReactToastify.css";
@@ -67,13 +67,25 @@ function App() {
   }
 
   // Removing a technology from the stack
-  const handleRemoveFromStack = (id : number) =>{
-    setStack((prevStack) => 
-      prevStack.filter((item) => item.id !== id)
-  );
-    toast.info("Technology removed from your stack!");
+ 
+const handleRemoveFromStack = (id: string) => {
+  // Check whether the technology exists in the stack
+  const technologyExists = stack.some((item) => item.id === id);
 
+  // If it does not exist, stop the function
+  if (!technologyExists) {
+    return;
   }
+
+  // Remove the technology from the stack
+  setStack((prevStack) =>
+    prevStack.filter((item) => item.id !== id)
+  );
+
+  // Show success toast only when the technology exists
+  toast.info("Technology removed from your stack!");
+};
+
 
   // Removing all technologies from the stack
   const handleRemoveAll = () => {
